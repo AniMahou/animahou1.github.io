@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniMahou Anime Music Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AniMahou Anime Music Quiz</h1>
+        </header>
+        <main>
+            <div class="quiz">
+                <div id="timer" class="digital-timer">Time Left: <span id="time">05:00</span></div>
+                <button id="startButton">Start</button>
+                <form id="quizForm" style="display:none;">
+                    <div class="user-info">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                        <label for="phone">Phone Number:</label>
+                        <input type="text" id="phone" name="phone">
+                    </div>
+                    <div class="audio-questions">
+                        <div class="audio-question">
+                            <audio controls>
+                                <source src="attack_on_titan.mp3" type="audio/mp3">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <input type="text" name="answer1" placeholder="Enter song name">
+                        </div>
+                        <div class="audio-question">
+                            <audio controls>
+                                <source src="one_piece.mp3" type="audio/mp3">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <input type="text" name="answer2" placeholder="Enter song name">
+                        </div>
+                        <div class="audio-question">
+                            <audio controls>
+                                <source src="naruto.mp3" type="audio/mp3">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <input type="text" name="answer3" placeholder="Enter song name">
+                        </div>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="leaderboard">
+                <h2>Leaderboard</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Marks</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard">
+                        <!-- Leaderboard entries will go here -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
